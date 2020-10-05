@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hue3;
+package hue3.bsp2;
 
 /**
  *
@@ -15,7 +15,7 @@ public class Hue3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
     }
 
 }
