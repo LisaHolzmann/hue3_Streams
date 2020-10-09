@@ -44,26 +44,25 @@ public class Main {
         ))
                 .collect(Collectors.toList());
 
-        /*
-
-        // lambda for interface Runnable
-        Thread t = new Thread(() -> System.out.println("ID = " + Thread.currentThread().getId()));
-        t.start();
-
-        // more complex lambda for Runnable
-        new Thread(() -> {
-            while (true) {
-                System.out.println(new Date());
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ex) {
-                    // do nothing
-                }
-            }
-        }).start();*/
         // lambda for own functional interfaces
-        Printable printable = w -> System.out.println(w.getName() + " [" + w.getDamageType() + " = " + w.getDamage() + "]");
-        printable.print(list.get(0));
+        Printable printable = w -> System.out.println("name=" + w.getName() + ", combatType=" + w.getCombatType() + ", damageType=" + w.getDamageType() + ", damage=" + w.getDamage() + ", speed=" + w.getSpeed() + ", minStrength=" + w.getMinStrength() + ", value=" + w.getValue());
+
+        Main.sort(list);
+        for (int i = 0; i < list.size(); i++) {
+            printable.print(list.get(i));
+
+        }
+
+        Main.sort2(list);
+        System.out.println("");
+        for (int i = 0; i < list.size(); i++) {
+            printable.print(list.get(i));
+
+        }
+
+        System.out.println("");
+        Main.printListAsTable();
+
     }
 
     public static void sort(List<Weapon> liste) {
@@ -84,6 +83,23 @@ public class Main {
             }
             return comp;
         });
+    }
+
+    public static void printListAsTable() {
+        System.out.println("-----------------------------------------------------------------");
+
+        Printable tablePrint = (w) -> {
+            System.out.printf("%-20s", " | " + w.getName());
+            System.out.printf("%-9s", " | " + w.getCombatType());
+            System.out.printf("%-11s ", " | " + w.getDamageType());
+            System.out.printf("%-6s", " | " + w.getDamage());
+            System.out.printf("%-3s", " | " + w.getSpeed());
+            System.out.printf("%-6s", " | " + w.getMinStrength());
+            System.out.printf("%-7s %n", " | " + w.getValue());
+            System.out.println("+---------------------------------------------------------------+");
+        };
+        list.forEach(w -> tablePrint.print(w));
+
     }
 
 }
