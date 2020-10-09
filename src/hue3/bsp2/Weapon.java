@@ -79,7 +79,11 @@ public class Weapon {
 
     @Override
     public boolean equals(Object obj) {
-        //implement this
+        if(obj instanceof Weapon){
+
+        }else{
+            return false;
+        }
     }
 
     @Override
