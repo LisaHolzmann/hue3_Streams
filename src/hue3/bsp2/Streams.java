@@ -16,48 +16,48 @@ public class Streams {
 
         List<String> erg = Arrays.asList(strings);
 
-        erg.stream().map(s -> s.toUpperCase());
+        erg = erg.stream().map(s -> s.toUpperCase()).collect(Collectors.toList());
         return erg;
 
     }
 
     public Weapon findWeaponWithLowestDamage(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public Weapon findWeaponWithHighestStrength(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public List<Weapon> collectMissileWeapons(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public Weapon findWeaponWithLongestName(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public List<String> toNameList(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public int[] toSpeedArray(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public int sumUpValues(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public long sumUpHashCodes(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public List<Weapon> removeDuplicates(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 
     public void increaseValuesByTenPercent(List<Weapon> weapons) {
-        //implement this
+        throw new UnsupportedOperationException();
     }
 }
